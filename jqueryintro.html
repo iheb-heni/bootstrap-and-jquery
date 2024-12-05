@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Bootstrap & jQuery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/">Formation <span class="text-primary">Bootstrap & jQuery</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <div class="profile-circle ms-auto">
+                    <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="">
+                    <span class="fw-bold fst-italic">IHEB HENI</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <ul class="list-unstyled">
+                <!-- Home Link -->
+                <li><a href="/" class="sidebar-link"><i class="bi bi-house-door icon"></i> Introduction</a></li>
+        
+                <!-- Dropdown for jQuery -->
+                <li class="dropdown">
+                    <a href="#" class="sidebar-link" id="toggle-jquery" data-bs-toggle="collapse" data-bs-target="#jquerySection" aria-expanded="false">
+                        <i class="bi bi-code-slash icon"></i> jQuery <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="collapse" id="jquerySection">
+                        <li><a href="#" class="sidebar-link ms-3" id="jqueryAnimations"><i class="bi bi-toggle-on icon"></i> Animations</a></li>
+                        <li><a href="#" class="sidebar-link ms-3" id="jqueryEvents"><i class="bi bi-calendar-check icon"></i> Événements</a></li>
+                        <li><a href="#" class="sidebar-link ms-3" id="jqueryEffects"><i class="bi bi-eye icon"></i> Effets</a></li>
+                    </ul>
+                </li>
+        
+                <!-- jQuery DOM Manipulation Section -->
+                <li><a href="#" class="sidebar-link" id="jqueryDomManip"><i class="bi bi-palette icon"></i> Manipulation DOM</a></li>
+        
+                <!-- jQuery AJAX Section -->
+                <li><a href="#" class="sidebar-link" id="jqueryAjax"><i class="bi bi-arrow-repeat icon"></i> AJAX</a></li>
+                
+                <!-- jQuery Validation Section -->
+                <li><a href="#" class="sidebar-link" id="jqueryValidation"><i class="bi bi-check-circle icon"></i> Validation</a></li>
+                
+                <!-- jQuery UI Section -->
+                <li><a href="#" class="sidebar-link" id="jqueryUI"><i class="bi bi-braces icon"></i> jQuery UI</a></li>
+        
+                <!-- jQuery Plugins Section -->
+                <li><a href="#" class="sidebar-link" id="jqueryPlugins"><i class="bi bi-plug icon"></i> Plugins</a></li>
+            </ul>
+        </nav>
+        
+        <script>
+            $(document).ready(function() {
+                $('#toggle-jquery').click(function() {
+                    $('#jquerySection').toggleClass('collapse');
+                });
+                // Example of jQuery animation
+                $('#jqueryAnimations').click(function() {
+                    $('#sidebar').animate({ width: 'toggle' });
+                });
+            });
+        </script>
+        
+        
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <div id="alert-container" class="alert-sweet" style="display:none;">
+                <span class="close-btn" onclick="closeSweetAlert()">×</span>
+                <div class="alert-title">Succès</div>
+                <div class="alert-message">Code copié avec succès !</div>
+            </div>
+            
+
+            <h2>jQuery : Sélecteurs</h2>
+            <p>Utilisez les sélecteurs jQuery pour cibler des éléments HTML :</p>
+            <div class="bg-dark text-white p-3 rounded position-relative">
+                <!-- Header with colored circles -->
+                <div class="d-flex align-items-center mb-2">
+                    <span class="circle bg-danger me-2"></span>
+                    <span class="circle bg-warning me-2"></span>
+                    <span class="circle bg-success me-2"></span>
+                </div>
+            
+                <!-- Copy Icon for this block -->
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('code2')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+            
+                <!-- Code Block -->
+                <pre class="m-0 rounded">
+                    <code id="code2">
+$(document).ready(function() {<br>
+&nbsp;&nbsp;$("button").click(function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$("#message").text("Bonjour, jQuery !");<br>
+&nbsp;&nbsp;});<br>
+});
+                    </code>
+                </pre>
+            </div>
+        
+            <button class="btn btn-primary mt-3">Cliquez-moi</button>
+            <p id="message" class="mt-2"></p>
+        
+        </main>
+    </div>
+
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+                

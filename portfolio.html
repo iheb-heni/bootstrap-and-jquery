@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (for icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    section{
+      height: 100vh;
+      margin-top: 10px;
+    }
+    #skills{
+      height: auto;
+    }
+    #footer{
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-5 fst-italic ms-5" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item fs-5 me-4 text-white"><a class="nav-link active" href="#home">home</a></li>
+          <li class="nav-item fs-5 me-4 text-white"><a class="nav-link " href="#about">About</a></li>
+          <li class="nav-item fs-5 me-4 text-white"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item fs-5 me-4 text-white"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item fs-5 me-4 text-white"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item me-3">
+            <a class="nav-link text-white" href="https://facebook.com" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+         
+          <li class="nav-item me-3">
+            <a class="nav-link text-white" href="https://linkedin.com" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://instagram.com" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="home" class="container py-5">
+    <div class="row vh-100 align-items-center">
+      <!-- Section de texte -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center text-center text-dark">
+        <h1>Hello, I'm Iheb Heni</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem ipsum, dolor sit adipisicing.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur.</p>
+        <div>   <button onclick="window.location.href='#contact'" class="btn btn-primary mt-3 d-inline">
+          <i class="bi bi-phone"></i> Contact Me
+        </button></div>
+     
+      </div>
+  
+      <!-- Section image -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img src="assets/imgs/profile-pic.png" alt="Iheb Heni" class="img-fluid w-80">
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+<section id="about" class="container py-5">
+  <h2 class="text-center">About Me</h2>
+  <p class="lead text-center">Hi, I'm a web developer passionate about creating modern web applications.</p>
+  <div class="row align-items-center">
+    <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+      <img src="assets/imgs/profile-pic.png" alt="Iheb Heni" class="img-fluid rounded-circle shadow w-75">
+    </div>
+    <div class="col-md-6">
+      <p class="fs-5">
+        I'm a dedicated Full-Stack Developer with expertise in building innovative solutions. Whether developing responsive websites, interactive user interfaces, or backend systems, I ensure high-quality and efficient results.
+      </p>
+      <a href="#" class="btn btn-success mt-3">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-light container py-5 mt-5">
+  <h2 class="text-center">My Projects</h2>
+  <div class="row">
+    <!-- Project 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/imgs/project1.jpg" class="card-img-top" alt="SersTour+">
+        <div class="card-body">
+          <h5 class="card-title">SersTour+</h5>
+          <p class="card-text">A web and mobile application for managing tourist and robotics events in Sers.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/imgs/project2.jpg" class="card-img-top" alt="GESCLES">
+        <div class="card-body">
+          <h5 class="card-title">GESCLES</h5>
+          <p class="card-text">A Laravel-based application for managing key borrowing and return processes efficiently.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/imgs/project3.jpg" class="card-img-top" alt="Mon Portrait">
+        <div class="card-body">
+          <h5 class="card-title">Mon Portrait</h5>
+          <p class="card-text">A Facebook page showcasing hyper-realistic drawings and oil paintings to engage art enthusiasts.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="#" class="btn btn-outline-dark">See More Projects</a>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-code fa-3x mb-3"></i>
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">HTML, CSS, JavaScript, Laravel, Vue.js, Bootstrap</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-database fa-3x mb-3"></i>
+            <h5 class="card-title">Database Management</h5>
+            <p class="card-text">MySQL, PostgreSQL, MongoDB</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+            <h5 class="card-title">Mobile Development</h5>
+            <p class="card-text">Flutter, Dart</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-cogs fa-3x mb-3"></i>
+            <h5 class="card-title">Back-End Development</h5>
+            <p class="card-text">PHP, Node.js, REST APIs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-pencil-ruler fa-3x mb-3"></i>
+            <h5 class="card-title">Design Skills</h5>
+            <p class="card-text">UI/UX, Adobe XD, Figma</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary border-light shadow-sm">
+          <div class="card-body">
+            <i class="fas fa-robot fa-3x mb-3"></i>
+            <h5 class="card-title">AI & Robotics</h5>
+            <p class="card-text">AI integration, Robotics programming</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div id="alertMessage" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <section id="footer">
+  <div class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+  </div>
+ </section>
+
+
+  <!-- Bootstrap 5 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- jQuery for form handling -->
+  <script>
+     $(document).ready(function() {
+    // Gestion des liens actifs dans la navbar
+    $('.navbar-nav .nav-link').on('click', function() {
+        // Retirer la classe 'active' de tous les liens
+        $('.navbar-nav .nav-link').removeClass('active');
+        // Ajouter la classe 'active' au lien cliqué
+        $(this).addClass('active');
+    });
+    });
+
+    
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+      var name = $('#name').val();
+      var email = $('#email').val();
+      var message = $('#message').val();
+      if (name && email && message) {
+        $('#alertMessage').html('<div class="alert alert-success">Thank you, ' + name + '. Your message has been sent!</div>');
+      } else {
+        $('#alertMessage').html('<div class="alert alert-danger">Please fill out all fields.</div>');
+      }
+
+      setTimeout(function() {
+        $('#alertMessage').fadeOut('slow');
+    }, 3000); // 3000 millisecondes = 3 secondes
+    });
+   
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!-- InlineetBloc .html -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation Bootstrap & jQuery</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .code-box {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: monospace;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+    .btn-copy {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn-copy:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <body>
+    <!-- Fixed Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/"
+          >Formation <span class="text-primary">Bootstrap & jQuery</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="profile-circle ms-auto">
+            <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+            <span class="fw-bold fst-italic">IHEB HENI</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <!-- Sidebar -->
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <ul class="list-unstyled">
+          <!-- Home Link -->
+          <li class="text-end" id="sidebarToggle">
+            <button class="btn btn-primary"><i class="bi bi-list"></i></button>
+          </li>
+          <li>
+            <a href="/" class="sidebar-link">
+              <i class="bi bi-house-door icon"></i> Accueil
+            </a>
+          </li>
+
+          <!-- Stage 1: Basics of Bootstrap -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#basics"
+              aria-expanded="false"
+            >
+              <i class="bi bi-bootstrap icon"></i> Découverte de Bootstrap
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="basics">
+              <li>
+                <a href="/bootstrapintro.html" class="sidebar-link ms-3">
+                  <i class="bi bi-info-circle icon"></i> Introduction
+                </a>
+              </li>
+              <li>
+                <a href="/colors.html" class="sidebar-link ms-3">
+                  <i class="bi bi-palette icon"></i> Couleurs et Fond
+                </a>
+              </li>
+
+              <li>
+                <a href="/typography.html" class="sidebar-link ms-3">
+                  <i class="bi bi-fonts icon"></i> Typographie
+                </a>
+              </li>
+              <li>
+                <a href="/InlineetBloc.html" class="sidebar-link ms-3">
+                  <i class="bi bi-fonts icon"></i> InlineetBloc
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/padding-margin-overflow.html"
+                  class="sidebar-link ms-3"
+                >
+                  <i class="bi bi-fonts icon"></i> padding-margin-overflow
+                </a>
+              </li>
+              <li>
+                <a href="/grid.html" class="sidebar-link ms-3">
+                  <i class="bi bi-grid icon"></i> Système de Grille
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Stage 2: Components -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#components"
+              aria-expanded="false"
+            >
+              <i class="bi bi-layers icon"></i> Composants
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="components">
+              <li>
+                <a href="/buttons.html" class="sidebar-link ms-3">
+                  <i class="bi bi-ui-radios icon"></i> Boutons
+                </a>
+              </li>
+              <li>
+                <a href="/forms.html" class="sidebar-link ms-3">
+                  <i class="bi bi-pencil-square icon"></i> Formulaires
+                </a>
+              </li>
+              <li>
+                <a href="/navbar.html" class="sidebar-link ms-3">
+                  <i class="bi bi-menu-button-wide icon"></i> Barre de
+                  Navigation
+                </a>
+              </li>
+              <li>
+                <a href="/cards.html" class="sidebar-link ms-3">
+                  <i class="bi bi-card-checklist icon"></i> Cartes
+                </a>
+              </li>
+              <li>
+                <a href="/alerts-toasts.html" class="sidebar-link ms-3">
+                  <i class="bi bi-bell icon"></i> Alertes & Toasts
+                </a>
+              </li>
+              <li>
+                <a href="/modals.html" class="sidebar-link ms-3">
+                  <i class="bi bi-window icon"></i> Modales
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Stage 3: Advanced Layout -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#advanced-layout"
+              aria-expanded="false"
+            >
+              <i class="bi bi-layout-text-window icon"></i> Mise en page avancée
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="advanced-layout">
+              <li>
+                <a href="/tables.html" class="sidebar-link ms-3">
+                  <i class="bi bi-table icon"></i> Tables
+                </a>
+              </li>
+              <li>
+                <a href="/utilities.html" class="sidebar-link ms-3">
+                  <i class="bi bi-tools icon"></i> Utilitaires
+                </a>
+              </li>
+              <li>
+                <a href="/flexbox.html" class="sidebar-link ms-3">
+                  <i class="bi bi-box-arrow-in-right icon"></i> Flexbox
+                </a>
+              </li>
+              <li>
+                <a href="/responsive.html" class="sidebar-link ms-3">
+                  <i class="bi bi-arrows-angle-expand icon"></i> Design
+                  Responsive
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Stage 4: Customization -->
+          <li>
+            <a href="/customization.html" class="sidebar-link">
+              <i class="bi bi-sliders icon"></i> Personnalisation
+            </a>
+          </li>
+
+          <!-- Stage 5: Practice -->
+          <li>
+            <a href="/projects.html" class="sidebar-link">
+              <i class="bi bi-code-slash icon"></i> Projets Pratiques
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Main Content -->
+      <main id="main-content">
+        <div class="container py-5">
+          <h2 class="text-center mb-4">
+            Tutoriel : Inline et Bloc avec Bootstrap
+          </h2>
+
+          <div>
+            <h3 class="section-title">Tableau des éléments Inline et Bloc</h3>
+            <p>
+              Voici un tableau pour mieux comprendre la différence entre les
+              éléments Inline et Bloc en HTML :
+            </p>
+            <table class="table table-bordered">
+              <thead class="table-dark">
+                <tr>
+                  <th>Type d'Élément</th>
+                  <th>Description</th>
+                  <th>Exemples</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inline</td>
+                  <td>
+                    <ul>
+                      <li>Ne prend que la largeur de son contenu</li>
+                      <li>
+                        Peut être placé côte à côte avec d'autres éléments
+                      </li>
+                    </ul>
+                  </td>
+                  <td>&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;img&gt;</td>
+                </tr>
+                <tr>
+                  <td>Bloc</td>
+                  <td>
+                    <ul>
+                      <li>Occupe toute la largeur de son conteneur</li>
+                      <li>Commence sur une nouvelle ligne</li>
+                    </ul>
+                  </td>
+                  <td>
+                    &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; à &lt;h6&gt;, &lt;ul&gt;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <h3 class="section-title">1. Comprendre les éléments Inline</h3>
+            <p>
+              Les éléments inline ne prennent que la largeur de leur contenu.
+              Avec Bootstrap, vous pouvez ajouter des styles comme
+              <code>.d-inline</code> pour les afficher côte à côte.
+            </p>
+
+            <h5>Exemple :</h5>
+            <div class="bg-light p-3">
+              <span class="bg-primary text-white p-2 d-inline">Inline 1</span>
+              <span class="bg-success text-white p-2 d-inline">Inline 2</span>
+            </div>
+            <div class="code-box">
+              <code>&lt;span class="d-inline"&gt;...&lt;/span&gt;</code>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="section-title">2. Comprendre les éléments Bloc</h3>
+            <p>
+              Les éléments bloc occupent toute la largeur de leur conteneur.
+              Bootstrap offre <code>.d-block</code> pour forcer ce comportement.
+            </p>
+
+            <h5>Exemple :</h5>
+            <div class="bg-light p-3">
+              <span class="bg-danger text-white p-2 d-block">Bloc 1</span>
+              <span class="bg-warning text-dark p-2 d-block">Bloc 2</span>
+            </div>
+            <div class="code-box">
+              <code>&lt;span class="d-block"&gt;...&lt;/span&gt;</code>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Ajouter Bootstrap et FontAwesome pour les icônes -->
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

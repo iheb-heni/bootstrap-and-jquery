@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Bootstrap & jQuery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .code-box {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    .btn-copy {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .btn-copy:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/">Formation <span class="text-primary">Bootstrap &
+          jQuery</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="profile-circle ms-auto">
+          <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+          <span class="fw-bold fst-italic">IHEB HENI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <ul class="list-unstyled">
+        <!-- Home Link -->
+        <li class="text-end" id="sidebarToggle">
+          <button class="btn btn-primary"><i class="bi bi-list"></i></button>
+        </li>
+        <li>
+          <a href="/" class="sidebar-link">
+            <i class="bi bi-house-door icon"></i> Accueil
+          </a>
+        </li>
+
+        <!-- Stage 1: Basics of Bootstrap -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#basics" aria-expanded="false">
+            <i class="bi bi-bootstrap icon"></i> Découverte de Bootstrap
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="basics">
+            <li>
+              <a href="/bootstrapintro.html" class="sidebar-link ms-3">
+                <i class="bi bi-info-circle icon"></i> Introduction
+              </a>
+            </li>
+            <li>
+              <a href="/colors.html" class="sidebar-link ms-3">
+                <i class="bi bi-palette icon"></i> Couleurs et Fond
+              </a>
+            </li>
+
+            <li>
+              <a href="/typography.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> Typographie
+              </a>
+            </li>
+            <li>
+              <a href="/InlineetBloc.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> InlineetBloc
+              </a>
+            </li>
+            <li>
+              <a
+                href="/padding-margin-overflow.html"
+                class="sidebar-link ms-3"
+              >
+                <i class="bi bi-fonts icon"></i> padding-margin-overflow
+              </a>
+            </li>
+            <li>
+              <a href="/grid.html" class="sidebar-link ms-3">
+                <i class="bi bi-grid icon"></i> Système de Grille
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 2: Components -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false">
+            <i class="bi bi-layers icon"></i> Composants
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="components">
+            <li>
+              <a href="/buttons.html" class="sidebar-link ms-3">
+                <i class="bi bi-ui-radios icon"></i> Boutons
+              </a>
+            </li>
+            <li>
+              <a href="/forms.html" class="sidebar-link ms-3">
+                <i class="bi bi-pencil-square icon"></i> Formulaires
+              </a>
+            </li>
+            <li>
+              <a href="/navbar.html" class="sidebar-link ms-3">
+                <i class="bi bi-menu-button-wide icon"></i> Barre de
+                Navigation
+              </a>
+            </li>
+            <li>
+              <a href="/cards.html" class="sidebar-link ms-3">
+                <i class="bi bi-card-checklist icon"></i> Cartes
+              </a>
+            </li>
+            <li>
+              <a href="/alerts-toasts.html" class="sidebar-link ms-3">
+                <i class="bi bi-bell icon"></i> Alertes & Toasts
+              </a>
+            </li>
+            <li>
+              <a href="/modals.html" class="sidebar-link ms-3">
+                <i class="bi bi-window icon"></i> Modales
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 3: Advanced Layout -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#advanced-layout"
+            aria-expanded="false">
+            <i class="bi bi-layout-text-window icon"></i> Mise en page avancée
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="advanced-layout">
+            <li>
+              <a href="/tables.html" class="sidebar-link ms-3">
+                <i class="bi bi-table icon"></i> Tables
+              </a>
+            </li>
+            <li>
+              <a href="/utilities.html" class="sidebar-link ms-3">
+                <i class="bi bi-tools icon"></i> Utilitaires
+              </a>
+            </li>
+            <li>
+              <a href="/flexbox.html" class="sidebar-link ms-3">
+                <i class="bi bi-box-arrow-in-right icon"></i> Flexbox
+              </a>
+            </li>
+            <li>
+              <a href="/responsive.html" class="sidebar-link ms-3">
+                <i class="bi bi-arrows-angle-expand icon"></i> Design
+                Responsive
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 4: Customization -->
+        <li>
+          <a href="/customization.html" class="sidebar-link">
+            <i class="bi bi-sliders icon"></i> Personnalisation
+          </a>
+        </li>
+
+        <!-- Stage 5: Practice -->
+        <li>
+          <a href="/projects.html" class="sidebar-link">
+            <i class="bi bi-code-slash icon"></i> Projets Pratiques
+          </a>
+        </li>
+      </ul>
+    </nav>
+<!-- Main Content -->
+<main id="main-content">
+
+    <div class="container py-5">
+        <h1 class="text-center">Bootstrap Tables Tutorial</h1>
+    
+        <!-- 1. Basic Table -->
+        <section>
+            <h3>1. Basic Table</h3>
+            <p>To create a simple table, use the <code>.table</code> class.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>
+                    &lt;table class="table"&gt; <br>
+                    &nbsp;&nbsp;&lt;thead&gt;...&lt;/thead&gt;<br>
+                    &nbsp;&nbsp;&lt;tbody&gt;...&lt;/tbody&gt;<br>
+                    &lt;/table&gt;
+                </code>
+            </div>
+        </section>
+    
+        <!-- 2. Striped Rows -->
+        <section>
+            <h3>2. Striped Rows</h3>
+            <p>Add the <code>.table-striped</code> class for striped rows.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>&lt;table class="table table-striped"&gt;...&lt;/table&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 3. Bordered Table -->
+        <section>
+            <h3>3. Bordered Table</h3>
+            <p>Add the <code>.table-bordered</code> class to add borders to all cells.</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>&lt;table class="table table-bordered"&gt;...&lt;/table&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 4. Hoverable Rows -->
+        <section>
+            <h3>4. Hoverable Rows</h3>
+            <p>Add the <code>.table-hover</code> class to highlight rows on hover.</p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>&lt;table class="table table-hover"&gt;...&lt;/table&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 5. Small Table -->
+        <section>
+            <h3>5. Small Table</h3>
+            <p>Add the <code>.table-sm</code> class to make a more compact table.</p>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>&lt;table class="table table-sm"&gt;...&lt;/table&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 6. Responsive Table -->
+        <section>
+            <h3>6. Responsive Table</h3>
+            <p>
+                Wrap the table with <code>.table-responsive</code> to make it scrollable on smaller devices.
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Occupation</th>
+                            <th>Department</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>25</td>
+                            <td>New York</td>
+                            <td>USA</td>
+                            <td>Developer</td>
+                            <td>IT</td>
+                            <td>123-456-7890</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>30</td>
+                            <td>Chicago</td>
+                            <td>USA</td>
+                            <td>Designer</td>
+                            <td>Creative</td>
+                            <td>987-654-3210</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="table-responsive"&gt;&lt;table&gt;...&lt;/table&gt;&lt;/div&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 7. Dark Table -->
+        <section>
+            <h3>7. Dark Table</h3>
+            <p>Use <code>.table-dark</code> for a table with a dark background.</p>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>30</td>
+                        <td>Chicago</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+                <code>&lt;table class="table table-dark"&gt;...&lt;/table&gt;</code>
+            </div>
+        </section>
+    
+    </div>
+  </main>
+  
+
+    <!-- Ajouter Bootstrap et FontAwesome pour les icônes -->
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

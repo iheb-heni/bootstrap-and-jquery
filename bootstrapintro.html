@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Bootstrap & jQuery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Fixed Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/">Formation <span class="text-primary">Bootstrap &
+          jQuery</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="profile-circle ms-auto">
+          <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+          <span class="fw-bold fst-italic">IHEB HENI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <ul class="list-unstyled">
+        <!-- Home Link -->
+        <li class="text-end" id="sidebarToggle">
+          <button class="btn btn-primary"><i class="bi bi-list"></i></button>
+        </li>
+        <li>
+          <a href="/" class="sidebar-link">
+            <i class="bi bi-house-door icon"></i> Accueil
+          </a>
+        </li>
+
+        <!-- Stage 1: Basics of Bootstrap -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#basics" aria-expanded="false">
+            <i class="bi bi-bootstrap icon"></i> Découverte de Bootstrap
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="basics">
+            <li>
+              <a href="/bootstrapintro.html" class="sidebar-link ms-3">
+                <i class="bi bi-info-circle icon"></i> Introduction
+              </a>
+            </li>
+            <li>
+              <a href="/colors.html" class="sidebar-link ms-3">
+                <i class="bi bi-palette icon"></i> Couleurs et Fond
+              </a>
+            </li>
+
+            <li>
+              <a href="/typography.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> Typographie
+              </a>
+            </li>
+            <li>
+              <a href="/InlineetBloc.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> InlineetBloc
+              </a>
+            </li>
+            <li>
+              <a
+                href="/padding-margin-overflow.html"
+                class="sidebar-link ms-3"
+              >
+                <i class="bi bi-fonts icon"></i> padding-margin-overflow
+              </a>
+            </li>
+            <li>
+              <a href="/grid.html" class="sidebar-link ms-3">
+                <i class="bi bi-grid icon"></i> Système de Grille
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 2: Components -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false">
+            <i class="bi bi-layers icon"></i> Composants
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="components">
+            <li>
+              <a href="/buttons.html" class="sidebar-link ms-3">
+                <i class="bi bi-ui-radios icon"></i> Boutons
+              </a>
+            </li>
+            <li>
+              <a href="/forms.html" class="sidebar-link ms-3">
+                <i class="bi bi-pencil-square icon"></i> Formulaires
+              </a>
+            </li>
+            <li>
+              <a href="/navbar.html" class="sidebar-link ms-3">
+                <i class="bi bi-menu-button-wide icon"></i> Barre de
+                Navigation
+              </a>
+            </li>
+            <li>
+              <a href="/cards.html" class="sidebar-link ms-3">
+                <i class="bi bi-card-checklist icon"></i> Cartes
+              </a>
+            </li>
+            <li>
+              <a href="/alerts-toasts.html" class="sidebar-link ms-3">
+                <i class="bi bi-bell icon"></i> Alertes & Toasts
+              </a>
+            </li>
+            <li>
+              <a href="/modals.html" class="sidebar-link ms-3">
+                <i class="bi bi-window icon"></i> Modales
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 3: Advanced Layout -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#advanced-layout"
+            aria-expanded="false">
+            <i class="bi bi-layout-text-window icon"></i> Mise en page avancée
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="advanced-layout">
+            <li>
+              <a href="/tables.html" class="sidebar-link ms-3">
+                <i class="bi bi-table icon"></i> Tables
+              </a>
+            </li>
+            <li>
+              <a href="/utilities.html" class="sidebar-link ms-3">
+                <i class="bi bi-tools icon"></i> Utilitaires
+              </a>
+            </li>
+            <li>
+              <a href="/flexbox.html" class="sidebar-link ms-3">
+                <i class="bi bi-box-arrow-in-right icon"></i> Flexbox
+              </a>
+            </li>
+            <li>
+              <a href="/responsive.html" class="sidebar-link ms-3">
+                <i class="bi bi-arrows-angle-expand icon"></i> Design
+                Responsive
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 4: Customization -->
+        <li>
+          <a href="/customization.html" class="sidebar-link">
+            <i class="bi bi-sliders icon"></i> Personnalisation
+          </a>
+        </li>
+
+        <!-- Stage 5: Practice -->
+        <li>
+          <a href="/projects.html" class="sidebar-link">
+            <i class="bi bi-code-slash icon"></i> Projets Pratiques
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container py-5">
+        <!-- Alertes -->
+        <div id="alert-container" class="alert-sweet" style="display: none">
+          <span class="close-btn" onclick="closeSweetAlert()">×</span>
+          <div class="alert-title">Succès</div>
+          <div class="alert-message">Code copié avec succès !</div>
+        </div>
+
+        <!-- Titre principal -->
+        <h1 class="text-center text-primary mb-4">
+          Introduction à Bootstrap : Tout ce que vous devez savoir jusqu'à
+          l'installation 🚀
+        </h1>
+
+        <!-- Section de présentation -->
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <h3 class="text-secondary">Qu'est-ce que Bootstrap ?</h3>
+            <p class="lead">
+              Bootstrap est un framework CSS open-source conçu pour simplifier
+              le développement d'interfaces utilisateur modernes,
+              professionnelles et réactives. Créé initialement par Twitter, il
+              est aujourd'hui l'un des outils les plus populaires pour
+              développer des sites web adaptatifs.
+            </p>
+            <p>
+              Bootstrap combine CSS, JavaScript et des utilitaires prédéfinis
+              pour accélérer la création de designs cohérents et élégants.
+            </p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap logo"
+              class="img-fluid w-75" />
+          </div>
+        </div>
+
+        <!-- Section avec icônes et images -->
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <img src="assets/imgs/css-logo.png" alt="CSS Logo" class="card-img-top"
+                style="height: 200px; object-fit: contain" />
+              <div class="card-body text-center">
+                <h5 class="card-title">CSS</h5>
+                <p class="card-text">
+                  Bootstrap repose largement sur CSS pour créer des interfaces
+                  réactives et modernes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <img src="assets/imgs/JavaScript-logo.png" alt="JavaScript Logo" class="card-img-top"
+                style="height: 200px; object-fit: contain" />
+              <div class="card-body text-center">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">
+                  Des composants JavaScript prêts à l'emploi tels que des
+                  modales, des carrousels et des alertes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap Icon"
+                class="card-img-top" style="height: 200px; object-fit: contain" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Icônes</h5>
+                <p class="card-text">
+                  Bootstrap fournit un ensemble d'icônes élégantes et faciles
+                  à intégrer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section d'informations supplémentaires -->
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Les avantages de Bootstrap</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">✅ Simplicité d’utilisation</li>
+              <li class="list-group-item">✅ Réactivité automatique</li>
+              <li class="list-group-item">✅ Standardisation visuelle</li>
+              <li class="list-group-item">✅ Extensibilité facile</li>
+              <li class="list-group-item">
+                ✅ Large communauté et documentation
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Pourquoi apprendre Bootstrap ?</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                ⚡ Gagnez du temps avec une base solide
+              </li>
+              <li class="list-group-item">
+                🌍 Utilisé par des millions de développeurs
+              </li>
+              <li class="list-group-item">
+                🔧 Polyvalent pour tous les types de projets
+              </li>
+              <li class="list-group-item">
+                🎓 Idéal pour les débutants en développement web réactif
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section de l'historique de Bootstrap -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <h3 class="text-center text-primary">Histoire de Bootstrap</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>2011</h5>
+                  <p>
+                    Création de Bootstrap par les développeurs de Twitter,
+                    Mark Otto et Jacob Thornton.
+                  </p>
+                  <div class="text-center">
+                    <img
+                      src="https://th.bing.com/th/id/R.159738ca7b1fe2d4e57d7a234ca09fc4?rik=2JDnT5TJoIqOrg&riu=http%3a%2f%2fwww.dummies.com%2fwp-content%2fuploads%2fcoding-all-in-one-mark-otto-jacob-thornton.jpg&ehk=oJciZH0HE%2fakPX39ZfIQrhybrxyHacxGOJEPP44O4rM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+                      alt="Mark Otto and Jacob Thornton" class="img-fluid rounded-circle" style="width: 500px" />
+                    <p class="mt-2">
+                      <strong>Mark Otto</strong> et
+                      <strong>Jacob Thornton</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>2013</h5>
+                  <p>
+                    Bootstrap 3 avec la conception "mobile-first" pour une
+                    meilleure adaptabilité.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>2018</h5>
+                  <p>
+                    Bootstrap 4 introduit Flexbox pour une gestion améliorée
+                    des mises en page.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>2021</h5>
+                  <p>
+                    Bootstrap 5 abandonne jQuery et intègre CSS Grid pour plus
+                    de flexibilité.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section d'installation -->
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <h3>Installation et Mise en Place de Bootstrap</h3>
+            <p>
+              Choisissez l'une des méthodes ci-dessous pour intégrer Bootstrap
+              dans vos projets. Chaque méthode est accompagnée d'exemples
+              concrets.
+            </p>
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-outline-primary m-2" data-bs-toggle="collapse" data-bs-target="#cdn-method">
+                CDN
+              </button>
+              <button class="btn btn-outline-success m-2" data-bs-toggle="collapse" data-bs-target="#download-method">
+                Téléchargement
+              </button>
+              <button class="btn btn-outline-warning m-2" data-bs-toggle="collapse" data-bs-target="#npm-method">
+                NPM / Yarn
+              </button>
+            </div>
+
+            <!-- Méthode CDN -->
+            <div id="cdn-method" class="collapse mt-3">
+              <h4>1. Intégration via CDN (Content Delivery Network)</h4>
+              <p>
+                Ajoutez directement les fichiers CSS et JavaScript depuis un
+                réseau de distribution de contenu (CDN). Cela ne nécessite
+                aucune installation supplémentaire.
+              </p>
+              <div class="bg-dark text-white p-3 rounded position-relative">
+                <!-- Header with colored circles -->
+                <div class="d-flex align-items-center mb-2">
+                  <span class="circle bg-danger me-2"></span>
+                  <span class="circle bg-warning me-2"></span>
+                  <span class="circle bg-success me-2"></span>
+                </div>
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('cdnCode')">
+                  <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="cdnCode">&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Exemple Bootstrap&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello world !&lt;/h1&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+              </div>
+            </div>
+
+            <!-- Méthode Téléchargement -->
+            <div id="download-method" class="collapse mt-3">
+              <h4>2. Téléchargement manuel des fichiers</h4>
+              <p>
+                Téléchargez les fichiers Bootstrap depuis le site officiel et
+                ajoutez-les directement dans votre projet.
+              </p>
+              <div class="bg-dark text-white p-3 rounded position-relative">
+                <!-- Header with colored circles -->
+                <div class="d-flex align-items-center mb-2">
+                  <span class="circle bg-danger me-2"></span>
+                  <span class="circle bg-warning me-2"></span>
+                  <span class="circle bg-success me-2"></span>
+                </div>
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2"
+                  onclick="copyCode('downloadCode')">
+                  <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="downloadCode">&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Exemple Bootstrap&lt;/title&gt;
+    &lt;link rel="stylesheet" href="chemin/vers/bootstrap.min.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello world !&lt;/h1&gt;
+    &lt;script src="chemin/vers/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+              </div>
+              <p>
+                <a class="btn btn-outline-primary mt-4"
+                  href="https://getbootstrap.com/docs/5.3/getting-started/download/" target="_blank">Télécharger
+                  Bootstrap ici</a>.
+              </p>
+              <div class="row mt-4 align-items-center">
+                <div class="col-md-4">
+                  <p>
+                    Voici comment organiser vos fichiers Bootstrap après les
+                    avoir téléchargés. Décompressez l'archive et ajoutez les
+                    fichiers dans votre projet comme montré ci-dessous.
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <img src="assets/imgs/Capture d'écran 2024-11-30 203817.png" alt="Image du dossier"
+                    class="img-fluid rounded" />
+                </div>
+                <div class="col-md-4">
+                  <img src="assets/imgs/Capture d'écran 2024-11-30 203852.png" alt="Image du dossier"
+                    class="img-fluid rounded" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Méthode NPM / Yarn -->
+            <div id="npm-method" class="collapse mt-3">
+              <h4>3. Installation via NPM ou Yarn</h4>
+              <p>
+                Pour une gestion moderne des dépendances, utilisez un
+                gestionnaire de paquets comme NPM ou Yarn.
+              </p>
+              <div class="bg-dark text-white p-3 rounded position-relative">
+                <!-- Header with colored circles -->
+                <div class="d-flex align-items-center mb-2">
+                  <span class="circle bg-danger me-2"></span>
+                  <span class="circle bg-warning me-2"></span>
+                  <span class="circle bg-success me-2"></span>
+                </div>
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('npmCode')">
+                  <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="npmCode">npm install bootstrap
+# ou bien
+yarn add bootstrap
+</code>
+        </pre>
+              </div>
+              <p>
+                Une fois installé, importez Bootstrap dans votre fichier
+                principal :
+              </p>
+              <div class="bg-dark text-white p-3 rounded position-relative">
+                <!-- Header with colored circles -->
+                <div class="d-flex align-items-center mb-2">
+                  <span class="circle bg-danger me-2"></span>
+                  <span class="circle bg-warning me-2"></span>
+                  <span class="circle bg-success me-2"></span>
+                </div>
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('importCode')">
+                  <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="importCode">import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+</code>
+        </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Ajouter Bootstrap et FontAwesome pour les icônes -->
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

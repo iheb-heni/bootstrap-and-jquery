@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Bootstrap & jQuery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .code-box {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    .btn-copy {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .btn-copy:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/">Formation <span class="text-primary">Bootstrap &
+          jQuery</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="profile-circle ms-auto">
+          <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+          <span class="fw-bold fst-italic">IHEB HENI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <ul class="list-unstyled">
+        <!-- Home Link -->
+        <li class="text-end" id="sidebarToggle">
+          <button class="btn btn-primary"><i class="bi bi-list"></i></button>
+        </li>
+        <li>
+          <a href="/" class="sidebar-link">
+            <i class="bi bi-house-door icon"></i> Accueil
+          </a>
+        </li>
+
+        <!-- Stage 1: Basics of Bootstrap -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#basics" aria-expanded="false">
+            <i class="bi bi-bootstrap icon"></i> Découverte de Bootstrap
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="basics">
+            <li>
+              <a href="/bootstrapintro.html" class="sidebar-link ms-3">
+                <i class="bi bi-info-circle icon"></i> Introduction
+              </a>
+            </li>
+            <li>
+              <a href="/colors.html" class="sidebar-link ms-3">
+                <i class="bi bi-palette icon"></i> Couleurs et Fond
+              </a>
+            </li>
+
+            <li>
+              <a href="/typography.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> Typographie
+              </a>
+            </li>
+            <li>
+              <a href="/InlineetBloc.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> InlineetBloc
+              </a>
+            </li>
+            <li>
+              <a
+                href="/padding-margin-overflow.html"
+                class="sidebar-link ms-3"
+              >
+                <i class="bi bi-fonts icon"></i> padding-margin-overflow
+              </a>
+            </li>
+            <li>
+              <a href="/grid.html" class="sidebar-link ms-3">
+                <i class="bi bi-grid icon"></i> Système de Grille
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 2: Components -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false">
+            <i class="bi bi-layers icon"></i> Composants
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="components">
+            <li>
+              <a href="/buttons.html" class="sidebar-link ms-3">
+                <i class="bi bi-ui-radios icon"></i> Boutons
+              </a>
+            </li>
+            <li>
+              <a href="/forms.html" class="sidebar-link ms-3">
+                <i class="bi bi-pencil-square icon"></i> Formulaires
+              </a>
+            </li>
+            <li>
+              <a href="/navbar.html" class="sidebar-link ms-3">
+                <i class="bi bi-menu-button-wide icon"></i> Barre de
+                Navigation
+              </a>
+            </li>
+            <li>
+              <a href="/cards.html" class="sidebar-link ms-3">
+                <i class="bi bi-card-checklist icon"></i> Cartes
+              </a>
+            </li>
+            <li>
+              <a href="/alerts-toasts.html" class="sidebar-link ms-3">
+                <i class="bi bi-bell icon"></i> Alertes & Toasts
+              </a>
+            </li>
+            <li>
+              <a href="/modals.html" class="sidebar-link ms-3">
+                <i class="bi bi-window icon"></i> Modales
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 3: Advanced Layout -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#advanced-layout"
+            aria-expanded="false">
+            <i class="bi bi-layout-text-window icon"></i> Mise en page avancée
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="advanced-layout">
+            <li>
+              <a href="/tables.html" class="sidebar-link ms-3">
+                <i class="bi bi-table icon"></i> Tables
+              </a>
+            </li>
+            <li>
+              <a href="/utilities.html" class="sidebar-link ms-3">
+                <i class="bi bi-tools icon"></i> Utilitaires
+              </a>
+            </li>
+            <li>
+              <a href="/flexbox.html" class="sidebar-link ms-3">
+                <i class="bi bi-box-arrow-in-right icon"></i> Flexbox
+              </a>
+            </li>
+            <li>
+              <a href="/responsive.html" class="sidebar-link ms-3">
+                <i class="bi bi-arrows-angle-expand icon"></i> Design
+                Responsive
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 4: Customization -->
+        <li>
+          <a href="/customization.html" class="sidebar-link">
+            <i class="bi bi-sliders icon"></i> Personnalisation
+          </a>
+        </li>
+
+        <!-- Stage 5: Practice -->
+        <li>
+          <a href="/projects.html" class="sidebar-link">
+            <i class="bi bi-code-slash icon"></i> Projets Pratiques
+          </a>
+        </li>
+      </ul>
+    </nav>
+<!-- Main Content -->
+<main id="main-content">
+    <div class="container py-5">
+        <div id="alert-container" class="alert-sweet" style="display: none">
+            <span class="close-btn" onclick="closeSweetAlert()">×</span>
+            <div class="alert-title">Succès</div>
+            <div class="alert-message">Code copié avec succès !</div>
+          </div>
+
+        <h2 class="text-center mb-4">Tutoriel : Typographie avec Bootstrap</h2>
+
+        <div>
+            <h3 class="section-title">1. Taille du texte</h3>
+            <p>Bootstrap offre plusieurs classes pour ajuster la taille du texte.</p>
+            
+            <h5>Exemples de tailles de texte :</h5>
+            <p class="fs-1">Texte très grand (fs-1)</p>
+            <p class="fs-2">Texte assez grand (fs-2)</p>
+            <p class="fs-3">Texte moyen (fs-3)</p>
+            <p class="fs-4">Texte plus petit (fs-4)</p>
+            <p class="fs-5">Texte encore plus petit (fs-5)</p>
+            <p class="fs-6">Texte très petit (fs-6)</p>
+
+            <div class="code-box">
+                <code>&lt;p class="fs-1"&gt;Texte très grand (fs-1)&lt;/p&gt;</code>
+                <button class="btn-copy" onclick="copyCode('codeFontSize')">Copier le code</button>
+            </div>
+            
+        </div>
+
+        <div>
+            <h3 class="section-title">2. Poids du texte</h3>
+            <p>Vous pouvez changer le poids de la police pour la rendre plus légère ou plus épaisse.</p>
+
+            <h5>Exemples de poids de texte :</h5>
+            <p class="fw-light">Texte léger (fw-light)</p>
+            <p class="fw-normal">Texte normal (fw-normal)</p>
+            <p class="fw-bold">Texte gras (fw-bold)</p>
+
+            <div class="code-box">
+                <code>&lt;p class="fw-light"&gt;Texte léger (fw-light)&lt;/p&gt;</code>
+                <button class="btn-copy" onclick="copyCode('codeFontWeight')">Copier le code</button>
+            </div>
+
+        </div>
+
+        <div>
+            <h3 class="section-title">3. Alignement du texte</h3>
+            <p>Bootstrap permet de facilement aligner le texte à gauche, à droite, ou au centre.</p>
+
+            <h5>Exemples d'alignement du texte :</h5>
+            <p class="text-start">Texte aligné à gauche (text-start)</p>
+            <p class="text-center">Texte centré (text-center)</p>
+            <p class="text-end">Texte aligné à droite (text-end)</p>
+
+            <div class="code-box">
+                <code>&lt;p class="text-start"&gt;Texte aligné à gauche (text-start)&lt;/p&gt;</code>
+                <button class="btn-copy" onclick="copyCode('codeTextAlign')">Copier le code</button>
+            </div>
+
+        </div>
+
+        <div>
+            <h3 class="section-title">4. Décoration du texte</h3>
+            <p>Vous pouvez ajouter des décorations comme des soulignements, des barrés ou des italiques.</p>
+
+            <h5>Exemples de décoration du texte :</h5>
+            <p class="text-decoration-underline">Texte souligné (text-decoration-underline)</p>
+            <p class="text-decoration-line-through">Texte barré (text-decoration-line-through)</p>
+            <p class="fst-italic">Texte en italique (fst-italic)</p>
+
+            <div class="code-box">
+                <code>&lt;p class="text-decoration-underline"&gt;Texte souligné (text-decoration-underline)&lt;/p&gt;</code>
+                <button class="btn-copy" onclick="copyCode('codeTextDecoration')">Copier le code</button>
+            </div>
+
+        </div>
+
+        <div>
+            <h3 class="section-title">5. Famille de police</h3>
+            <p>Bootstrap vous permet de définir différentes familles de polices.</p>
+
+            <h5>Exemples de familles de police :</h5>
+            <p class="font-sans-serif">Texte avec police sans-serif (font-sans-serif)</p>
+            <p class="font-serif">Texte avec police serif (font-serif)</p>
+            <p class="font-monospace">Texte avec police monospace (font-monospace)</p>
+
+            <div class="code-box">
+                <code>&lt;p class="font-sans-serif"&gt;Texte avec police sans-serif (font-sans-serif)&lt;/p&gt;</code>
+                <button class="btn-copy" onclick="copyCode('codeFontFamily')">Copier le code</button>
+            </div>
+        </div>
+        <h1 class="text-center mt-5">Tutoriel Bootstrap Icons</h1>
+
+        <!-- 1. Introduction aux Bootstrap Icons -->
+        <section>
+            <h3>1. Introduction aux Bootstrap Icons</h3>
+            <p>Les Bootstrap Icons sont une bibliothèque d'icônes open-source de haute qualité qui peuvent être utilisées facilement dans vos projets. Vous pouvez les intégrer à votre projet en ajoutant le CDN de Bootstrap Icons ou en les installant via npm.</p>
+            <p>Pour inclure Bootstrap Icons, ajoutez simplement la ligne suivante dans la balise <code>&lt;head&gt;</code> de votre HTML :</p>
+            <pre class="m-0 rounded text-start">
+<code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"&gt;</code>
+            </pre>
+        </section>
+
+        <hr>
+
+        <!-- 2. Affichage des icônes -->
+        <section>
+            <h3>2. Affichage des icônes</h3>
+            <p>Pour afficher une icône, utilisez la balise <code>&lt;i&gt;</code> avec le nom de classe correspondant à l'icône que vous souhaitez. Voici un exemple :</p>
+            <div class="bg-dark text-white p-3 mt-3 rounded position-relative">
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('displayIconsCode')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="displayIconsCode">&lt;i class="bi bi-alarm"&gt;&lt;/i&gt;</code>
+                </pre>
+            </div>
+            <p>Résultat :</p>
+            <i class="bi bi-alarm"></i>
+        </section>
+
+        <hr>
+
+        <!-- 3. Icônes avec texte -->
+        <section>
+            <h3>3. Icônes avec texte</h3>
+            <p>Vous pouvez également combiner des icônes avec du texte pour un meilleur visuel. Utilisez la balise <code>&lt;i&gt;</code> aux côtés de votre texte dans n'importe quel élément HTML.</p>
+            <div class="bg-dark text-white p-3 mt-3 rounded position-relative">
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('iconsWithTextCode')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="iconsWithTextCode">&lt;i class="bi bi-heart"&gt;&lt;/i&gt; J'aime Bootstrap</code>
+                </pre>
+            </div>
+            <p>Résultat :</p>
+            <i class="bi bi-heart"></i> J'aime Bootstrap
+        </section>
+
+        <hr>
+
+        <!-- 4. Changer la taille des icônes -->
+        <section>
+            <h3>4. Changer la taille des icônes</h3>
+            <p>Vous pouvez ajuster la taille des icônes en utilisant les classes <code>fs-*</code>. Voici quelques exemples :</p>
+            <ul>
+                <li><code>fs-1</code> - Taille la plus grande</li>
+                <li><code>fs-2</code> - Taille grande</li>
+                <li><code>fs-3</code> - Taille moyenne</li>
+                <li><code>fs-4</code> - Taille petite</li>
+            </ul>
+            <div class="bg-dark text-white p-3 mt-3 rounded position-relative">
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('iconSizeCode')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="iconSizeCode">&lt;i class="bi bi-heart fs-1"&gt;&lt;/i&gt; Icône Grande</code>
+                </pre>
+            </div>
+            <p>Résultat :</p>
+            <i class="bi bi-heart fs-1"></i> Icône Grande
+        </section>
+
+        <hr>
+
+        <!-- 5. Couleurs des icônes -->
+        <section>
+            <h3>5. Couleurs des icônes</h3>
+            <p>Les icônes Bootstrap héritent de la couleur de leur élément parent. Vous pouvez changer la couleur de l'icône en utilisant les classes utilitaires <code>text-*</code>. Voici comment faire :</p>
+            <ul>
+                <li><code>text-primary</code> - Couleur bleue</li>
+                <li><code>text-secondary</code> - Couleur grise</li>
+                <li><code>text-success</code> - Couleur verte</li>
+                <li><code>text-danger</code> - Couleur rouge</li>
+            </ul>
+            <div class="bg-dark text-white p-3 mt-3 rounded position-relative">
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('iconColorCode')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="iconColorCode">&lt;i class="bi bi-heart text-danger"&gt;&lt;/i&gt; Icône Rouge</code>
+                </pre>
+            </div>
+            <p>Résultat :</p>
+            <i class="bi bi-heart text-danger"></i> Icône Rouge
+        </section>
+
+        <hr>
+
+        <!-- 6. Rotation des icônes -->
+        <section>
+            <h3>6. Rotation des icônes</h3>
+            <p>Vous pouvez faire pivoter les icônes en utilisant les classes <code>rotate-*</code>. Voici comment :</p>
+            <ul>
+                <li><code>rotate-90</code> - Rotation de 90 degrés</li>
+                <li><code>rotate-180</code> - Rotation de 180 degrés</li>
+                <li><code>rotate-270</code> - Rotation de 270 degrés</li>
+            </ul>
+            <div class="bg-dark text-white p-3 mt-3 rounded position-relative">
+                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2" onclick="copyCode('iconRotateCode')">
+                    <i class="fas fa-copy"></i> Copier
+                </button>
+                <pre class="m-0 rounded text-start">
+<code id="iconRotateCode">&lt;i class="bi bi-arrow-clockwise rotate-90"&gt;&lt;/i&gt; Icône Rotée</code>
+                </pre>
+            </div>
+            <p>Résultat :</p>
+            <i class="bi bi-arrow-clockwise rotate-90"></i> Icône Rotée
+        </section>
+    </div>
+  </main>
+  
+
+    <!-- Ajouter Bootstrap et FontAwesome pour les icônes -->
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

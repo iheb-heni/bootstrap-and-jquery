@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation Bootstrap & jQuery</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Fixed Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/"
+          >Formation <span class="text-primary">Bootstrap & jQuery</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="profile-circle ms-auto">
+            <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+            <span class="fw-bold fst-italic">IHEB HENI</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <ul class="list-unstyled">
+          <!-- Home Link -->
+          <li>
+            <a href="/" class="sidebar-link"
+              ><i class="bi bi-house-door icon"></i> Page principale</a
+            >
+          </li>
+          <li>
+            <a href="/" class="sidebar-link"
+              ><i class="bi bi-house-door icon"></i> Introduction</a
+            >
+          </li>
+
+          <!-- Dropdown for Bootstrap Grid -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#bootstrapGrid"
+              aria-expanded="false"
+            >
+              <i class="bi bi-grid icon"></i> Bootstrap
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="bootstrapGrid">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-columns icon"></i> Grille</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-box-seam icon"></i> Composants</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-layout-wtf icon"></i> Grille Responsive</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Forms and Validation -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#formElements"
+              aria-expanded="false"
+            >
+              <i class="bi bi-pencil-square icon"></i> Formulaires
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="formElements">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-check-circle icon"></i> Validation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-input-cursor icon"></i> Champs</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Alerts & Modals -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#alertsModals"
+              aria-expanded="false"
+            >
+              <i class="bi bi-bell icon"></i> Alertes & Modales
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="alertsModals">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-exclamation-circle icon"></i> Alertes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-window icon"></i> Modales</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Cards -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#cards"
+              aria-expanded="false"
+            >
+              <i class="bi bi-card-checklist icon"></i> Cartes
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="cards">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-card icon"></i> Cartes Types</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-card-heading icon"></i> Cartes Contenus</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Colors -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#colors"
+              aria-expanded="false"
+            >
+              <i class="bi bi-palette icon"></i> Couleurs
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="colors">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-paint-bucket icon"></i> Fond et Texte</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-file-earmark-pdf icon"></i> Thèmes</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Tables -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="sidebar-link"
+              data-bs-toggle="collapse"
+              data-bs-target="#tables"
+              aria-expanded="false"
+            >
+              <i class="bi bi-table icon"></i> Tables
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="collapse" id="tables">
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-table icon"></i> Table de Données</a
+                >
+              </li>
+              <li>
+                <a href="#" class="sidebar-link ms-3"
+                  ><i class="bi bi-table2 icon"></i> Table Responsives</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Utility Links -->
+          <li>
+            <a href="#" class="sidebar-link"
+              ><i class="bi bi-gear icon"></i> Utilitaires</a
+            >
+          </li>
+
+          <!-- Icons Section -->
+          <li>
+            <a href="#" class="sidebar-link"
+              ><i class="bi bi-star icon"></i> Icônes</a
+            >
+          </li>
+
+          <!-- Responsive Visibility -->
+          <li>
+            <a href="#" class="sidebar-link"
+              ><i class="bi bi-eye-slash icon"></i> Visibilité</a
+            >
+          </li>
+
+          <!-- Carousels -->
+          <li>
+            <a href="#" class="sidebar-link"
+              ><i class="bi bi-sliders icon"></i> Carrousels</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="main-content">
+        <h1>Bienvenue à la Formation</h1>
+        <div id="alert-container" class="alert-sweet" style="display: none">
+          <span class="close-btn" onclick="closeSweetAlert()">×</span>
+          <div class="alert-title">Succès</div>
+          <div class="alert-message">Code copié avec succès !</div>
+        </div>
+        <p>
+          Cette formation couvre les bases de <strong>Bootstrap</strong> et
+          <strong>jQuery</strong>, deux outils essentiels pour les développeurs
+          front-end. Vous apprendrez à créer des interfaces modernes et
+          dynamiques.
+        </p>
+
+        <h2>Bootstrap : Exemple d'une Grille</h2>
+        <p>Voici un exemple de mise en page avec la grille Bootstrap :</p>
+        <div class="bg-dark text-white p-3 rounded position-relative">
+          <!-- Header with colored circles -->
+          <div class="d-flex align-items-center mb-2">
+            <span class="circle bg-danger me-2"></span>
+            <span class="circle bg-warning me-2"></span>
+            <span class="circle bg-success me-2"></span>
+          </div>
+
+          <!-- Copy Icon for this block -->
+          <button
+            class="btn btn-light btn-sm position-absolute top-0 end-0 m-2"
+            onclick="copyCode('code1')"
+          >
+            <i class="fas fa-copy"></i> Copier
+          </button>
+
+          <!-- Code Block -->
+          <pre class="m-0 rounded">
+                    <code id="code1">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;Colonne 1&lt;/div&gt;
+        &lt;div class="col-md-6"&gt;Colonne 2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+        </div>
+
+        <h2>jQuery : Sélecteurs</h2>
+        <p>Utilisez les sélecteurs jQuery pour cibler des éléments HTML :</p>
+        <div class="bg-dark text-white p-3 rounded position-relative">
+          <!-- Header with colored circles -->
+          <div class="d-flex align-items-center mb-2">
+            <span class="circle bg-danger me-2"></span>
+            <span class="circle bg-warning me-2"></span>
+            <span class="circle bg-success me-2"></span>
+          </div>
+
+          <!-- Copy Icon for this block -->
+          <button
+            class="btn btn-light btn-sm position-absolute top-0 end-0 m-2"
+            onclick="copyCode('code2')"
+          >
+            <i class="fas fa-copy"></i> Copier
+          </button>
+
+          <!-- Code Block -->
+          <pre class="m-0 rounded">
+                    <code id="code2">
+$(document).ready(function() {<br>
+&nbsp;&nbsp;$("button").click(function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$("#message").text("Bonjour, jQuery !");<br>
+&nbsp;&nbsp;});<br>
+});
+                    </code>
+                </pre>
+        </div>
+
+        <button class="btn btn-primary mt-3">Cliquez-moi</button>
+        <p id="message" class="mt-2"></p>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

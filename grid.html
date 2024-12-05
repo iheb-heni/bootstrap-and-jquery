@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Bootstrap & jQuery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .code-box {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    .btn-copy {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .btn-copy:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ps-4 fs-4 fst-italic" href="/">Formation <span class="text-primary">Bootstrap &
+          jQuery</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="profile-circle ms-auto">
+          <img class="profile-pic" src="assets/imgs/profile-pic.png" alt="" />
+          <span class="fw-bold fst-italic">IHEB HENI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <ul class="list-unstyled">
+        <!-- Home Link -->
+        <li class="text-end" id="sidebarToggle">
+          <button class="btn btn-primary"><i class="bi bi-list"></i></button>
+        </li>
+        <li>
+          <a href="/" class="sidebar-link">
+            <i class="bi bi-house-door icon"></i> Accueil
+          </a>
+        </li>
+
+        <!-- Stage 1: Basics of Bootstrap -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#basics" aria-expanded="false">
+            <i class="bi bi-bootstrap icon"></i> Découverte de Bootstrap
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="basics">
+            <li>
+              <a href="/bootstrapintro.html" class="sidebar-link ms-3">
+                <i class="bi bi-info-circle icon"></i> Introduction
+              </a>
+            </li>
+            <li>
+              <a href="/colors.html" class="sidebar-link ms-3">
+                <i class="bi bi-palette icon"></i> Couleurs et Fond
+              </a>
+            </li>
+
+            <li>
+              <a href="/typography.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> Typographie
+              </a>
+            </li>
+            <li>
+              <a href="/InlineetBloc.html" class="sidebar-link ms-3">
+                <i class="bi bi-fonts icon"></i> InlineetBloc
+              </a>
+            </li>
+            <li>
+              <a
+                href="/padding-margin-overflow.html"
+                class="sidebar-link ms-3"
+              >
+                <i class="bi bi-fonts icon"></i> padding-margin-overflow
+              </a>
+            </li>
+            <li>
+              <a href="/grid.html" class="sidebar-link ms-3">
+                <i class="bi bi-grid icon"></i> Système de Grille
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 2: Components -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false">
+            <i class="bi bi-layers icon"></i> Composants
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="components">
+            <li>
+              <a href="/buttons.html" class="sidebar-link ms-3">
+                <i class="bi bi-ui-radios icon"></i> Boutons
+              </a>
+            </li>
+            <li>
+              <a href="/forms.html" class="sidebar-link ms-3">
+                <i class="bi bi-pencil-square icon"></i> Formulaires
+              </a>
+            </li>
+            <li>
+              <a href="/navbar.html" class="sidebar-link ms-3">
+                <i class="bi bi-menu-button-wide icon"></i> Barre de
+                Navigation
+              </a>
+            </li>
+            <li>
+              <a href="/cards.html" class="sidebar-link ms-3">
+                <i class="bi bi-card-checklist icon"></i> Cartes
+              </a>
+            </li>
+            <li>
+              <a href="/alerts-toasts.html" class="sidebar-link ms-3">
+                <i class="bi bi-bell icon"></i> Alertes & Toasts
+              </a>
+            </li>
+            <li>
+              <a href="/modals.html" class="sidebar-link ms-3">
+                <i class="bi bi-window icon"></i> Modales
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 3: Advanced Layout -->
+        <li class="dropdown">
+          <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#advanced-layout"
+            aria-expanded="false">
+            <i class="bi bi-layout-text-window icon"></i> Mise en page avancée
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="collapse" id="advanced-layout">
+            <li>
+              <a href="/tables.html" class="sidebar-link ms-3">
+                <i class="bi bi-table icon"></i> Tables
+              </a>
+            </li>
+            <li>
+              <a href="/utilities.html" class="sidebar-link ms-3">
+                <i class="bi bi-tools icon"></i> Utilitaires
+              </a>
+            </li>
+            <li>
+              <a href="/flexbox.html" class="sidebar-link ms-3">
+                <i class="bi bi-box-arrow-in-right icon"></i> Flexbox
+              </a>
+            </li>
+            <li>
+              <a href="/responsive.html" class="sidebar-link ms-3">
+                <i class="bi bi-arrows-angle-expand icon"></i> Design
+                Responsive
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Stage 4: Customization -->
+        <li>
+          <a href="/customization.html" class="sidebar-link">
+            <i class="bi bi-sliders icon"></i> Personnalisation
+          </a>
+        </li>
+
+        <!-- Stage 5: Practice -->
+        <li>
+          <a href="/projects.html" class="sidebar-link">
+            <i class="bi bi-code-slash icon"></i> Projets Pratiques
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-content">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Comprendre le Système de Grille de Bootstrap</h2>
+    
+        <!-- 1. Introduction au système de grille -->
+        <section>
+            <h3>1. Introduction au système de grille</h3>
+            <p>
+                Le système de grille de Bootstrap est basé sur 12 colonnes. Cela signifie que l’espace d’une ligne est divisé en 12 parties égales. Vous pouvez utiliser ces colonnes pour ajuster la disposition de votre contenu.
+                La structure de base de la grille est composée de deux éléments principaux :
+                <ul>
+                    <li><strong>.container</strong> : Conteneur pour maintenir une largeur maximale et de la mise en page.</li>
+                    <li><strong>.row</strong> : Contient les colonnes et détermine leur disposition horizontale.</li>
+                </ul>
+            </p>
+        </section>
+    
+        <!-- 2. Exemple de Grille de Base -->
+        <section>
+            <h3>2. Exemple de Grille de Base (12 Colonnes)</h3>
+            <p>
+                Voici une grille simple où chaque colonne occupe 4 espaces (3 colonnes total, chaque colonne occupe 4/12).
+            </p>
+            <div class="row">
+                <div class="col-4 bg-primary col-example">
+                    4 Colonnes
+                </div>
+                <div class="col-4 bg-success col-example">
+                    4 Colonnes
+                </div>
+                <div class="col-4 bg-danger col-example">
+                    4 Colonnes
+                </div>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="col-4"&gt;...&lt;/div&gt;</code> (répété trois fois)
+            </div>
+        </section>
+    
+        <!-- 3. Colonnes Responsives -->
+        <section>
+            <h3>3. Colonnes Responsives</h3>
+            <p>
+                Bootstrap vous permet de rendre vos colonnes responsives, c’est-à-dire qu'elles vont changer de taille en fonction de la largeur de l’écran. 
+                Les classes suivantes sont utilisées pour cela :
+                <ul>
+                    <li><strong>.col-*</strong> : Pour les petits écrans (moins de 576px).</li>
+                    <li><strong>.col-sm-*</strong> : Pour les écrans de petite taille (à partir de 576px).</li>
+                    <li><strong>.col-md-*</strong> : Pour les écrans de taille moyenne (à partir de 768px).</li>
+                    <li><strong>.col-lg-*</strong> : Pour les grands écrans (à partir de 992px).</li>
+                    <li><strong>.col-xl-*</strong> : Pour les écrans très larges (à partir de 1200px).</li>
+                </ul>
+            </p>
+            <p>Exemple de grille réactive (les colonnes changent selon la taille de l’écran) :</p>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 bg-primary col-example">
+                    Colonne 1
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 bg-success col-example">
+                    Colonne 2
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 bg-danger col-example">
+                    Colonne 3
+                </div>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;</code><br>
+                <code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;</code><br>
+                <code>&lt;div class="col-12 col-md-12 col-lg-4"&gt;...&lt;/div&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 4. Espacement Entre les Colonnes -->
+        <section>
+            <h3>4. Espacement Entre les Colonnes</h3>
+            <p>
+                Bootstrap permet de créer un espacement entre les colonnes à l’aide des classes de marge sur la ligne.
+                Par exemple, <strong>.g-3</strong> ajoute un espacement de 1 rem entre les colonnes.
+            </p>
+            <div class="row g-3">
+                <div class="col-4 bg-primary col-example">
+                    4 Colonnes
+                </div>
+                <div class="col-4 bg-success col-example">
+                    4 Colonnes
+                </div>
+                <div class="col-4 bg-danger col-example">
+                    4 Colonnes
+                </div>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="row g-3"&gt;...&lt;/div&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 5. Décalages -->
+        <section>
+            <h3>5. Décalages des Colonnes</h3>
+            <p>
+                Un décalage est un espace vide ajouté avant une colonne, ce qui permet de décaler son contenu sans ajouter de marges externes. 
+                Exemple : un décalage de 4 colonnes avec la classe <strong>.offset-4</strong>.
+            </p>
+            <div class="row">
+                <div class="col-4 offset-4 bg-primary col-example">
+                    Colonne Décalée de 4
+                </div>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="col-4 offset-4"&gt;...&lt;/div&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 6. Colonnes Imbriquées -->
+        <section>
+            <h3>6. Colonnes Imbriquées</h3>
+            <p>
+                Vous pouvez imbriquer des colonnes à l’intérieur d’une autre colonne pour créer des mises en page plus complexes. 
+                Cela permet de créer des dispositions avec des sous-grilles.
+            </p>
+            <div class="row">
+                <div class="col-8 bg-primary col-example">
+                    Colonne Principale
+                    <div class="row">
+                        <div class="col-6 bg-danger col-example">
+                            Colonne Imbriquée 1
+                        </div>
+                        <div class="col-6 bg-success col-example">
+                            Colonne Imbriquée 2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 bg-warning col-example">
+                    Colonne Secondaire
+                </div>
+            </div>
+            <div class="code-box">
+                <code>&lt;div class="col-8"&gt;...&lt;/div&gt;</code><br>
+                <code>&lt;div class="col-6"&gt;...&lt;/div&gt;</code><br>
+                <code>&lt;div class="col-6"&gt;...&lt;/div&gt;</code>
+            </div>
+        </section>
+    
+        <!-- 7. Résumé des Classes -->
+        <section>
+            <h3>7. Résumé des Classes de Grille</h3>
+            <ul>
+                <li><strong>.col-*</strong> : Définit une colonne occupante de l’espace restant dans la ligne.</li>
+                <li><strong>.col-sm-*</strong> : Pour les petits écrans (à partir de 576px).</li>
+                <li><strong>.col-md-*</strong> : Pour les écrans moyens (à partir de 768px).</li>
+                <li><strong>.col-lg-*</strong> : Pour les grands écrans (à partir de 992px).</li>
+                <li><strong>.col-xl-*</strong> : Pour les écrans très larges (à partir de 1200px).</li>
+                <li><strong>.offset-*</strong> : Décale une colonne d’un nombre donné de colonnes.</li>
+                <li><strong>.g-*</strong> : Ajoute un espacement global entre les colonnes.</li>
+            </ul>
+        </section>
+    </div>
+    </main>
+    
+  
+
+    <!-- Ajouter Bootstrap et FontAwesome pour les icônes -->
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+     
+   
